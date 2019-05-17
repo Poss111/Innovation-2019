@@ -1,0 +1,244 @@
+# This is an Anaconda project file.
+#
+# Here you can describe your project and how to run it.
+# Use `anaconda-project run` to run the project.
+# The file is in YAML format, please see http://www.yaml.org/start.html for more.
+#
+
+#
+# Set the 'name' key to name your project
+#
+name: Innovatio2019
+
+
+
+#
+# Set the 'icon' key to give your project an icon
+#
+icon:
+
+
+
+
+#
+# Set a one-sentence-or-so 'description' key with project details
+#
+description:
+
+
+
+
+#
+# In the commands section, list your runnable scripts, notebooks, and other code.
+# Use `anaconda-project add-command` to add commands.
+#
+commands:
+  Untitled.ipynb:
+    notebook: Untitled.ipynb
+    env_spec: default
+  lib/python3.7/site-packages/nbconvert/exporters/tests/files/attachment.ipynb:
+    notebook: lib/python3.7/site-packages/nbconvert/exporters/tests/files/attachment.ipynb
+    env_spec: default
+  lib/python3.7/site-packages/nbconvert/exporters/tests/files/notebook2.ipynb:
+    notebook: lib/python3.7/site-packages/nbconvert/exporters/tests/files/notebook2.ipynb
+    env_spec: default
+  lib/python3.7/site-packages/nbconvert/exporters/tests/files/pngmetadata.ipynb:
+    notebook: lib/python3.7/site-packages/nbconvert/exporters/tests/files/pngmetadata.ipynb
+    env_spec: default
+  lib/python3.7/site-packages/nbconvert/exporters/tests/files/prompt_numbers.ipynb:
+    notebook: lib/python3.7/site-packages/nbconvert/exporters/tests/files/prompt_numbers.ipynb
+    env_spec: default
+  lib/python3.7/site-packages/nbconvert/exporters/tests/files/rawtest.ipynb:
+    notebook: lib/python3.7/site-packages/nbconvert/exporters/tests/files/rawtest.ipynb
+    env_spec: default
+  lib/python3.7/site-packages/nbconvert/exporters/tests/files/svg.ipynb:
+    notebook: lib/python3.7/site-packages/nbconvert/exporters/tests/files/svg.ipynb
+    env_spec: default
+  lib/python3.7/site-packages/nbconvert/preprocessors/tests/files/Clear Output.ipynb:
+    notebook: lib/python3.7/site-packages/nbconvert/preprocessors/tests/files/Clear
+      Output.ipynb
+    env_spec: default
+  lib/python3.7/site-packages/nbconvert/preprocessors/tests/files/Disable Stdin.ipynb:
+    notebook: lib/python3.7/site-packages/nbconvert/preprocessors/tests/files/Disable
+      Stdin.ipynb
+    env_spec: default
+  lib/python3.7/site-packages/nbconvert/preprocessors/tests/files/Empty Cell.ipynb:
+    notebook: lib/python3.7/site-packages/nbconvert/preprocessors/tests/files/Empty
+      Cell.ipynb
+    env_spec: default
+  lib/python3.7/site-packages/nbconvert/preprocessors/tests/files/Factorials.ipynb:
+    notebook: lib/python3.7/site-packages/nbconvert/preprocessors/tests/files/Factorials.ipynb
+    env_spec: default
+  lib/python3.7/site-packages/nbconvert/preprocessors/tests/files/HelloWorld.ipynb:
+    notebook: lib/python3.7/site-packages/nbconvert/preprocessors/tests/files/HelloWorld.ipynb
+    env_spec: default
+  lib/python3.7/site-packages/nbconvert/preprocessors/tests/files/Inline Image.ipynb:
+    notebook: lib/python3.7/site-packages/nbconvert/preprocessors/tests/files/Inline
+      Image.ipynb
+    env_spec: default
+  lib/python3.7/site-packages/nbconvert/preprocessors/tests/files/Interrupt-IPY6.ipynb:
+    notebook: lib/python3.7/site-packages/nbconvert/preprocessors/tests/files/Interrupt-IPY6.ipynb
+    env_spec: default
+  lib/python3.7/site-packages/nbconvert/preprocessors/tests/files/Interrupt.ipynb:
+    notebook: lib/python3.7/site-packages/nbconvert/preprocessors/tests/files/Interrupt.ipynb
+    env_spec: default
+  lib/python3.7/site-packages/nbconvert/preprocessors/tests/files/JupyterWidgets.ipynb:
+    notebook: lib/python3.7/site-packages/nbconvert/preprocessors/tests/files/JupyterWidgets.ipynb
+    env_spec: default
+  lib/python3.7/site-packages/nbconvert/preprocessors/tests/files/SVG.ipynb:
+    notebook: lib/python3.7/site-packages/nbconvert/preprocessors/tests/files/SVG.ipynb
+    env_spec: default
+  lib/python3.7/site-packages/nbconvert/preprocessors/tests/files/Skip Exceptions with Cell Tags-IPY6.ipynb:
+    notebook: lib/python3.7/site-packages/nbconvert/preprocessors/tests/files/Skip
+      Exceptions with Cell Tags-IPY6.ipynb
+    env_spec: default
+  lib/python3.7/site-packages/nbconvert/preprocessors/tests/files/Skip Exceptions with Cell Tags.ipynb:
+    notebook: lib/python3.7/site-packages/nbconvert/preprocessors/tests/files/Skip
+      Exceptions with Cell Tags.ipynb
+    env_spec: default
+  lib/python3.7/site-packages/nbconvert/preprocessors/tests/files/Skip Exceptions-IPY6.ipynb:
+    notebook: lib/python3.7/site-packages/nbconvert/preprocessors/tests/files/Skip
+      Exceptions-IPY6.ipynb
+    env_spec: default
+  lib/python3.7/site-packages/nbconvert/preprocessors/tests/files/Skip Exceptions.ipynb:
+    notebook: lib/python3.7/site-packages/nbconvert/preprocessors/tests/files/Skip
+      Exceptions.ipynb
+    env_spec: default
+  lib/python3.7/site-packages/nbconvert/preprocessors/tests/files/Unicode.ipynb:
+    notebook: lib/python3.7/site-packages/nbconvert/preprocessors/tests/files/Unicode.ipynb
+    env_spec: default
+  lib/python3.7/site-packages/nbconvert/preprocessors/tests/files/UnicodePy3.ipynb:
+    notebook: lib/python3.7/site-packages/nbconvert/preprocessors/tests/files/UnicodePy3.ipynb
+    env_spec: default
+  lib/python3.7/site-packages/nbconvert/preprocessors/tests/files/update-display-id.ipynb:
+    notebook: lib/python3.7/site-packages/nbconvert/preprocessors/tests/files/update-display-id.ipynb
+    env_spec: default
+  lib/python3.7/site-packages/nbconvert/tests/files/Widget_List.ipynb:
+    notebook: lib/python3.7/site-packages/nbconvert/tests/files/Widget_List.ipynb
+    env_spec: default
+  lib/python3.7/site-packages/nbconvert/tests/files/latex-linked-image.ipynb:
+    notebook: lib/python3.7/site-packages/nbconvert/tests/files/latex-linked-image.ipynb
+    env_spec: default
+  lib/python3.7/site-packages/nbconvert/tests/files/markdown_display_priority.ipynb:
+    notebook: lib/python3.7/site-packages/nbconvert/tests/files/markdown_display_priority.ipynb
+    env_spec: default
+  lib/python3.7/site-packages/nbconvert/tests/files/notebook1.ipynb:
+    notebook: lib/python3.7/site-packages/nbconvert/tests/files/notebook1.ipynb
+    env_spec: default
+  lib/python3.7/site-packages/nbconvert/tests/files/notebook2.ipynb:
+    notebook: lib/python3.7/site-packages/nbconvert/tests/files/notebook2.ipynb
+    env_spec: default
+  lib/python3.7/site-packages/nbconvert/tests/files/notebook3_with_errors.ipynb:
+    notebook: lib/python3.7/site-packages/nbconvert/tests/files/notebook3_with_errors.ipynb
+    env_spec: default
+  lib/python3.7/site-packages/nbconvert/tests/files/notebook4_jpeg.ipynb:
+    notebook: lib/python3.7/site-packages/nbconvert/tests/files/notebook4_jpeg.ipynb
+    env_spec: default
+  lib/python3.7/site-packages/nbconvert/tests/files/notebook_jl.ipynb:
+    notebook: lib/python3.7/site-packages/nbconvert/tests/files/notebook_jl.ipynb
+    env_spec: default
+  lib/python3.7/site-packages/nbformat/tests/invalid.ipynb:
+    notebook: lib/python3.7/site-packages/nbformat/tests/invalid.ipynb
+    env_spec: default
+  lib/python3.7/site-packages/nbformat/tests/test2.ipynb:
+    notebook: lib/python3.7/site-packages/nbformat/tests/test2.ipynb
+    env_spec: default
+  lib/python3.7/site-packages/nbformat/tests/test3.ipynb:
+    notebook: lib/python3.7/site-packages/nbformat/tests/test3.ipynb
+    env_spec: default
+  lib/python3.7/site-packages/nbformat/tests/test4.ipynb:
+    notebook: lib/python3.7/site-packages/nbformat/tests/test4.ipynb
+    env_spec: default
+  lib/python3.7/site-packages/nbformat/tests/test4custom.ipynb:
+    notebook: lib/python3.7/site-packages/nbformat/tests/test4custom.ipynb
+    env_spec: default
+  lib/python3.7/site-packages/nbformat/tests/test4docinfo.ipynb:
+    notebook: lib/python3.7/site-packages/nbformat/tests/test4docinfo.ipynb
+    env_spec: default
+  lib/python3.7/site-packages/nbformat/tests/test4jupyter_metadata.ipynb:
+    notebook: lib/python3.7/site-packages/nbformat/tests/test4jupyter_metadata.ipynb
+    env_spec: default
+  lib/python3.7/site-packages/nbformat/tests/test4plus.ipynb:
+    notebook: lib/python3.7/site-packages/nbformat/tests/test4plus.ipynb
+    env_spec: default
+  lib/python3.7/site-packages/notebook/bundler/tests/resources/empty.ipynb:
+    notebook: lib/python3.7/site-packages/notebook/bundler/tests/resources/empty.ipynb
+    env_spec: default
+
+
+
+#
+# In the variables section, list any environment variables your code depends on.
+# Use `anaconda-project add-variable` to add variables.
+#
+variables: {}
+
+
+
+#
+# In the services section, list any services that should be
+# available before your code runs.
+# Use `anaconda-project add-service` to add services.
+#
+services: {}
+
+
+
+#
+# In the downloads section, list any URLs to download to local files
+# before your code runs.
+# Use `anaconda-project add-download` to add downloads.
+#
+downloads: {}
+
+
+
+#
+# In the packages section, list any packages that must be installed
+# before your code runs.
+# Use `anaconda-project add-packages` to add packages.
+#
+packages:
+- anaconda
+
+
+
+#
+# In the channels section, list any Conda channel URLs to be searched
+# for packages.
+#
+# For example,
+#
+# channels:
+#    - mychannel
+#
+channels: []
+
+
+
+#
+# In the platforms section, list platforms the project should work on
+# Examples: "linux-64", "osx-64", "win-64"
+# Use `anaconda-project add-platforms` to add platforms.
+#
+platforms:
+- linux-64
+- osx-64
+- win-64
+
+
+
+#
+# You can define multiple, named environment specs.
+# Each inherits any global packages or channels,
+# but can have its own unique ones also.
+# Use `anaconda-project add-env-spec` to add environment specs.
+#
+env_specs:
+  default:
+    description: Default environment spec for running commands
+    packages: []
+    channels: []
+    platforms: []
+
+
