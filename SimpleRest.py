@@ -15,9 +15,11 @@ import pandas as pd
 from flask import request
 import constants
 import dateparser
+from flask_cors import CORS
 
 simpleparser.loadValues() 
 app = Flask(__name__)
+cors = CORS(app, resources={r"*": {"origins": "*"}})
 api = Api(app)
 
 class test(Resource):
@@ -30,11 +32,15 @@ class dealData(Resource):
     
 class dealAggData(Resource):
     def get(self):
-        return jsonify(simpleparser.pdOne.groupby([constants.MONTHLY_REPORTING_PERIOD])[constants.CURRENT_ACTUAL_UPB].to_json())
- 
+        return simpleparser.pdOne[simpleparser.pdOne[constants.REFERENCE_POOL_ID] == 1462].groupby([constants.MONTHLY_REPORTING_PERIOD],group_keys=True)[constants.CURRENT_ACTUAL_UPB].agg("sum").to_json()
+
+class dealAggPercentChangeData(Resource):
+    def get(self):
+        return simpleparser.pdOne[simpleparser.pdOne[constants.REFERENCE_POOL_ID] == 1462].groupby([constants.MONTHLY_REPORTING_PERIOD],group_keys=True)[constants.CURRENT_ACTUAL_UPB].agg("sum").pct_change().to_json()
+
 class timeline(Resource):
     def get(self):
-        return jsonify(pd.to_datetime(simpleparser.pdOne[constants.MONTHLY_REPORTING_PERIOD].unique(), format='%m%Y').strftime('%B %Y').tolist())
+        return jsonify(pd.to_datetime(simpleparser.pdOne[constants.MONTHLY_REPORTING_PERIOD].sort_values(ascending=True).unique(), format='%m%Y').strftime('%B %Y').tolist())
     
 class dynamicColumnFetch(Resource):
     def get(self):
@@ -48,14 +54,14 @@ class dynamicColumnFetch(Resource):
                 print("Requesting following column :: " + request.args.get(requestParamKey))
                 columnList.append(request.args.get(requestParamKey)) 
                 
-        if (not filterYear):
-            print ("Filter Deal Name :: " + filterDealName)
+        if (filterDealName != None):
+            print ("Filter Deal Name :: " + str(filterDealName))
             return jsonify(simpleparser.pdOne[simpleparser.pdOne[constants.DEAL_NAME] == filterDealName].filter(list(columnList)).head(numberOfRows).to_json(orient='records'))
-        elif (not filterDealName):
+        elif (filterYear != None):
             print("Filter Year :: " + str(filterYear))
             return jsonify(simpleparser.pdOne[simpleparser.pdOne[constants.MONTHLY_REPORTING_PERIOD] > filterYear].filter(list(columnList)).head(numberOfRows).to_json(orient='records'))
         else:
-            return jsonify(simpleparser.pdOne.filter(list(columnList)).sample(n=1000).to_json(orient='records'))    
+            return jsonify(simpleparser.pdOne.filter(list(columnList)).sample(n=numberOfRows).to_json(orient='records'))    
     
 @app.errorhandler(500)    
 def InternalServerError(RequestException: Exception):
@@ -70,6 +76,7 @@ def ApiNotFound(RequestException: Exception):
 api.add_resource(test, "/creditrisk/data")
 api.add_resource(dealData, "/creditrisk/deals")
 api.add_resource(dealAggData, "/creditrisk/deals-agg")
+api.add_resource(dealAggPercentChangeData, "/creditrisk/deals-percent-agg")
 api.add_resource(dynamicColumnFetch, "/creditrisk/column-fetch")
 api.add_resource(timeline, "/creditrisk/fetchLGTime")
 
